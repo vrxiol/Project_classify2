@@ -44,6 +44,9 @@ html_8 = """
 """
 st.markdown(html_8, unsafe_allow_html=True)
 st.markdown("")
+A1 = st.number_input("กรุณาเลือกข้อมูลอายุ")
+A2 = st.number_input("กรุณาเลือกเพศชาย=1 หญิง=0")
+A3 = st.number_input("กรุณาเลือกข้อมูลของเจ็บหน้าอก")
 
 pt_len = st.slider("กรุณาเลือกข้อมูล petal.length")
 pt_wd = st.slider("กรุณาเลือกข้อมูล petal.width")
@@ -53,23 +56,21 @@ sp_wd = st.number_input("กรุณาเลือกข้อมูล sepal.
 
 if st.button("ทำนายผล"):
     #st.write("ทำนาย")
-   dt = pd.read_csv("./data/iris-3.csv") 
-   X = dt.drop('variety', axis=1)
+   dt = pd.read_csv("./data/Heart.csv") 
+   X = dt.drop('HeartDisease', axis=1)
    y = dt.variety   
 
    Knn_model = KNeighborsClassifier(n_neighbors=3)
    Knn_model.fit(X, y)  
     
-   x_input = np.array([[pt_len, pt_wd, sp_len, sp_wd]])
+   x_input = np.array([[A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11]])
    st.write(Knn_model.predict(x_input))
    
    out=Knn_model.predict(x_input)
 
-   if out[0] == 'Setosa':
-    st.image("./img/iris1.jpg")
+   if out[0] == 1:
+    st.image("./img/h4.jpg")
    elif out[0] == 'Versicolor':       
-    st.image("./img/iris2.jpg")
-   else:
-    st.image("./img/iris3.jpg")
+    st.image("./img/h2.jpg")
 else:
     st.write("ไม่ทำนาย")
