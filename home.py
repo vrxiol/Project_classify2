@@ -16,5 +16,5 @@ st.image('./img/h5')
 st.subheader("โรคหัวใจล้มเหลว")
 
 
-st.image('./img/h5')
-st.subheader("โรคหัวใจล้มเหลว")
+st.subheader("่สถิติข้อมูลโรคหัวใจ")
+st.write('ผลรวม')
