@@ -12,6 +12,7 @@ st.image('./img/h1.jpg')
 st.subheader("โรคหัวใจล้มเหลว")
 
 dt = pd.read_csv("./data/Heart.csv")
+st.write(dt.head(10))
 st.image('./img/h5.jpg')
 st.subheader("โรคหัวใจล้มเหลว")
 
