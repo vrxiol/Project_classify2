@@ -11,7 +11,7 @@ st.header("🍖🍖การพยากรณ์โรคหัวใจล้�
 st.image('./img/h1.jpg')
 st.subheader("โรคหัวใจล้มเหลว")
 
-dt = pd.read_csv("./data/Heart3.csv")
+dt = pd.read_csv("./data/Heart.csv")
 st.image('./img/h5.jpg')
 st.subheader("โรคหัวใจล้มเหลว")
 
