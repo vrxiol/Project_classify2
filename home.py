@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.neighbors import KNeighborsClassifier
-
+from sklearn.neighbors import KNeighborsClassifie
 
 st.title("🐷🐷🐷การพยากรณ์โรคหัวใจล้มเหลวด้วยเทคนิคเหมืองข้อมูล🐷🐷")
 st.header("🍖🍖การพยากรณ์โรคหัวใจล้มเหลวด้วยเทคนิคเหมืองข้อมูล🍖🍖")
@@ -36,3 +36,4 @@ average_female_age = dt[dt['Sex'] == 0]['Age'].mean()
 dxage = [average_male_age, average_female_age]
 dxage2 = pd.DataFrame(dxage, index=["Male", "Female"])
 st.bar_chart(dxage2)
+
