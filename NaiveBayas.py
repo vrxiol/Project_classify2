@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 from sklearn.naive_bayes import GaussianNB
 
-
 Heart=pd.read_csv('./data/Heart.csv')
 X =Heart.drop(columns=['HeartDisease'])
 y =Heart.HeartDisease
@@ -16,13 +15,6 @@ st.title("Naïve Bayes Classifier - Iris Dataset")
 st.write("ป้อนคุณสมบัติของดอกไม้เพื่อทำนายประเภท")
 
 # รับค่าจากผู้ใช้ผ่าน slider
-html_8 = """
-<div style="background-color:#6BD5DA;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
-<center><h5>ทำนายข้อมูล</h5></center>
-</div>
-"""
-st.markdown(html_8, unsafe_allow_html=True)
-st.markdown("")
 A1 = st.number_input("กรุณาเลือกข้อมูลอายุ")
 A2 = st.number_input("กรุณาเลือกเพศชาย=1 หญิง=0")
 A3 = st.number_input("กรุณาเลือกข้อมูลของเจ็บหน้าอก")
@@ -34,8 +26,10 @@ A8 = st.number_input("กรุณาเลือกข้อมูลของ�
 A9 = st.number_input("กรุณาเลือกข้อมูลของเจ็บหน้าอก6")
 A10 = st.number_input("กรุณาเลือกข้อมูลของเจ็บหน้าอก7")
 A11 = st.number_input("กรุณาเลือกข้อมูลของเจ็บหน้าอก8")
+
 # สร้างอาร์เรย์ข้อมูลจากค่าที่ป้อน
 input_data = np.array([[A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11]])
+
 # ทำนายผลลัพธ์
 prediction = model.predict(input_data)
 prediction_proba = model.predict_proba(input_data)
