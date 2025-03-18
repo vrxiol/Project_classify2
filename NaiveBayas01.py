@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn.naive_bayes import GaussianNB
 
-Heart=pd.read_csv('./data/Heart.csv')
+Heart = pd.read_csv('./data/Heart.csv')
 x =Heart.drop(columns=['HeartDisease'])
 y =Heart.HeartDisease
 
