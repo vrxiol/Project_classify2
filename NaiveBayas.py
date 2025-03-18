@@ -8,7 +8,7 @@ X =Heart.drop(columns=['HeartDisease'])
 y =Heart.HeartDisease
 
 model = GaussianNB()
-model.fit(x, y)
+model.fit(X, y)
 
 # ตั้งค่าหน้าเว็บ Streamlit
 st.title("Naïve Bayes Classifier - Iris Dataset")
